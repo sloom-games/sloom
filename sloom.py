@@ -21,6 +21,7 @@ rpc.update(state="sloom",details="Slooming",large_image="sloom",start=time.time(
 
 root = Tk()
 root.title('Sloom')
+root.iconbitmap('sloom.ico')
 HEIGHT = 100
 WIDTH = 100
 canvas = Canvas(root, height=HEIGHT, width=WIDTH)
