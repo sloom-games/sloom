@@ -1,10 +1,13 @@
+#Imports
 from tkinter import *
-import vlc
+import tkinter as tk
+import pygame
 import sys
 import os
 import time
 from pypresence import Presence
 
+#Pyinstaller
 def resource_path(relative_path):
     """ Get absolute path to resource, works for dev and for PyInstaller """
     try:
@@ -14,25 +17,41 @@ def resource_path(relative_path):
 
     return os.path.join(base_path, relative_path)
 
-rpc = Presence("914268050583343124")
-rpc.connect()
-rpc.update(state="sloom",details="Slooming",large_image="sloom",start=time.time())
-
-
-root = Tk()
+#Variables
+root = tk.Tk()
 root.title('Sloom')
-HEIGHT = 100
-WIDTH = 100
-canvas = Canvas(root, height=HEIGHT, width=WIDTH)
-image = PhotoImage(file=r"sloom.png")
-canvas.create_image(WIDTH/2, HEIGHT/2, anchor="center", image=image)
+root.iconbitmap('sloom.ico')
 root.resizable(width=False, height=False)
+height = 300
+width = 300
+
+pygame.mixer.init()
+def sloom_music():
+    pygame.mixer.music.load("Sloom.mp3")
+    pygame.mixer.music.play(loops=0)
+
+#Discord Presence
+#if discord is not open it wont crash the program
+try:
+    rpc = Presence("914268050583343124")
+    rpc.connect()
+    rpc.update(state="sloom", details="Slooming", large_image="sloom", start=time.time())
+except:
+    print("Discord not found")
+    discord = Label(root, text="Discord not found", fg='red')
+    discord.pack()
+
+#Sloom
+sloom_music()
+
+#UI
+sloom = Label(root, text="Sloom", font=("Segoe UI", 16))
+sloom.pack()
+
+image = PhotoImage(file=r"sloom.png")
+canvas = Canvas(root, height=height, width=width)
+canvas.create_image(width/2, height/2, anchor="center", image=image)
 canvas.pack()
 
-player = vlc.Instance()
-
-p = vlc.MediaPlayer("Sloom.mp3")
-p.play()
-
-
+#this
 root.mainloop()
