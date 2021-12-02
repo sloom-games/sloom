@@ -45,7 +45,7 @@ except:
 sloom_music()
 
 #UI
-sloom = Label(root, text="Sloom", font=("Segoe UI", 16))
+sloom = Label(root, text="Sloom", font=("Comic Sans MS", 16))
 sloom.pack()
 
 image = PhotoImage(file=r"sloom.png")
