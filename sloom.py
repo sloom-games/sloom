@@ -28,7 +28,7 @@ width = 300
 pygame.mixer.init()
 def sloom_music():
     pygame.mixer.music.load("Sloom.mp3")
-    pygame.mixer.music.play(loops=0)
+    pygame.mixer.music.play(loops=1)
 
 #Discord Presence
 #if discord is not open it wont crash the program
