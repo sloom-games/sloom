@@ -1,11 +1,12 @@
 # Sloom
-an app for all your slooming needs
+a website for all your slooming needs
 
 ## How to sloom
-Go to the "releases" tab and download the ZIP file and run "sloom.exe".
-Or you can run it directly from the source by running "sloom.py"
+Go to the "Environments" tab and press "View deployment".
+Or you can run it directly from the source by running "index.html"
+Or go to https://zlennii.github.io/sloom/
 
 ## Features
-- Discord RPC
-- High Quality Music in background
+- Portable
+- High Quality Jumpscare
 - Sloom
