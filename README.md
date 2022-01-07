@@ -9,3 +9,7 @@ Or you can run it directly from the source by running "sloom.py"
 - Discord RPC
 - High Quality Music in background
 - Sloom
+
+## Coming soon
+- Click Counter
+- Steam Release (maybe)x
