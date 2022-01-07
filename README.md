@@ -12,4 +12,4 @@ Or you can run it directly from the source by running "sloom.py"
 
 ## Coming soon
 - Click Counter
-- Steam Release (maybe)x
+- Steam Release (maybe)
